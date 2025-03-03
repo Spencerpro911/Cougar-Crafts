@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Webpage</title>
+    <style>
+        @keyframes colorChange {
+            0% { color: blue; }
+            25% { color: green; }
+            50% { color: red; }
+            75% { color: purple; }
+            100% { color: blue; }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            animation: colorChange 5s infinite;
+        }
+        body {
+            
+        background: linear-gradient(to top right, rgb(146, 233, 227), rgb(255, 255, 255));
+        animation: backgroundChange 10s infinite;
+    }
+
+    @keyframes backgroundChange {
+        0% { background-position: bottom left; }
+        100% { background-position: top right; }
+        }
+
+        h1 {
+            color: blue;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        h2 {
+            color: blue;
+            font-size: 25px;
+            text-align: center;
+            line-height: 0.1px;
+            animation: shake 0.5s infinite;
+        }
+
+        h6 {
+            color: rgb(0, 0, 0);
+            font-size: 15px;
+            text-align: center;
+            animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+
+          
+        }
+
+        button {
+            display: inline-block;
+            margin: auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+           
+
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transition: transform 0.3s ease;
+
+        transform: scale(1.2);
+        }
+
+       
+
+        #search {
+            padding: 5px;
+            margin-left: 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #search:hover {
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+
+            
+
+            
+            }
+        
+
+        h2 {
+            text-align: center;
+        }
+
+        h3{
+
+            text-align: center;
+            offset-distance: 10px;
+            margin-top: 20px;
+
+        }
+        #hiringMessage {
+            text-align: center;
+            color: red;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button id="learnMoreBtn" onclick="openLearnMore()" class="nav-button">Learn More</button>
+        <button id="productsBtn" onclick="openProducts()" class="nav-button">Products</button>
+        <button id="teamBtn" onclick="openTeam()" class="nav-button">Team</button>
+        <!-- Search Bar -->
+        <input type="text" id="search" placeholder="Search..." onkeypress="openRelatedButton(event)" />
+    </header>
+    <section>
+        <h1>Cougar Crafts</h1>
+        <h2>Established in 2025</h2>
+        <h6>Imagination, Creation, Motivation</h6>
+    </section>
+    <section>
+        <h1>Designed to elimate your boredom </h1>
+          </section>
+    <div id="hiringMessage"></div>
+
+    <footer></footer>
+
+
+    <script>
+        function openLearnMore() {
+            let newTab = window.open("", "_blank");
+            newTab.document.write(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Learn More</title>
+                    <style>
+                        body {
+                            background-color: rgb(87, 221, 218);
+                        }
+                    </style>
+                </head>
+                <body>
+                   
+
+                <h1>About Our Company</h1>
+                <p>At Cougar Crafts, we believe that the right school supplies can inspire creativity, organization, and academic excellence.
+                     We provide everything students and teachers need for a productive learning experience. 
+                     Our products are designed for durability, affordability, and style, ensuring that every learner is equipped for success.
+                      Whether you're preparing for a new school year or restocking essentials, Cougar Crafts is your trusted source for top-quality school supplies!
+
+</p>
+
+ <h1>Observation</h1>
+                    <p>Many students face the issue of lack of motivation when studying. 
+                        62.5% of students feel less motivated to study without cute stationary, 
+                        and 68.8% of students don’t like to study on computers and don’t like to study if they don’t have fun 
+                        highlighters or things to draw with. Not being motivated to do school work and study, leads to bad grades for many students across many different schools. 
+                        This is a serious problem, especially if the solution is simply a question of motivation, which could be solved relatively easily. 
+
+</p>
+                    <h1>The Solution</h1>
+                    <p>Our solution to this lack of motivation in students is to create stationary that is colonel by themed and would encourage students to study on paper,
+                         and would encourage students to study while at the same time carrying school spirit with them wherever they go.
+                          We would create customized pencils, pencil cases, notebooks and more!
+                           This would help students from all over the school with their study habits. 
+
+	We would customize the products by printing out fun stickers and placing them on the products,
+     as well as sewing into pencil cases, or adding fun sewn accessories to pencils and erasers.
+</p>
+                    <h1>Why Our Approach</h1>
+                    <p>Many students when they show up to school are less motivated to take notes or actually do work during the school day.
+                         The existing tools to use during school are boring pencils to write in boring notebooks that they carry in boring pencil cases.
+                          But our product will provide students with the satisfaction of having something cool and customized when they open up their backpack, rather than something from WalMart.
+                           This addresses the issue of low motivation because students that get excited over their stationary will be more excited to always use it, and it brings more joy to studying and doing work. 
+
+</p>
+                </body>
+                </html>
+            `);
+            newTab.document.close();
+        }
+
+        function openProducts() {
+            let newTab = window.open("", "_blank");
+            newTab.document.write(`
+                 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing for Couga Crafts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .pricing-category {
+            font-size: 20px;
+            font-weight: bold;
+            color: #16a085;
+            margin-top: 20px;
+            border-bottom: 2px solid #16a085;
+            padding-bottom: 5px;
+        }
+        .price-item {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .price {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pricing for Cougar Crafts</h1>
+
+    <div class="pricing-category">Notebooks</div>
+    <p class="price-item">1 Notebook - <span class="price">$5</span></p>
+
+    <div class="pricing-category">Pencils</div>
+    <p class="price-item">1 Pencil: <span class="price">$1.50</span></p>
+
+    <div class="pricing-category">Erasers</div>
+    <p class="price-item">1 Eraser - <span class="price">$1</span></p>
+   
+    
+    <div class="pricing-category">Pencil Cases</div>
+    <p class="price-item">1 Pencil Case - <span class="price">$6</span></p>
+   
+       
+</body>
+</html>
+
+            `);
+            newTab.document.close();
+        }
+
+        function openClasses() {
+            let newTab = window.open("", "_blank");
+            newTab.document.write(`
+               <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origami Classes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .class-category {
+            background-color: #16a085;
+            color: white;
+            padding: 10px;
+            margin: 10px auto;
+            width: 60%;
+            border-radius: 8px;
+        }
+        .class-details {
+            background-color: white;
+            padding: 15px;
+            margin: 10px auto;
+            width: 50%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Origami Classes</h1>
+
+    <div class="class-category">Beginner (20 students per class)</div>
+    <div class="class-details">Level 1: $20 per hour</div>
+    <div class="class-details">Level 2: $50 per hour</div>
+
+    <div class="class-category">Intermediate (10 students per class - Local/Provincial Competitions)</div>
+    <div class="class-details">Level 1: $80 per hour</div>
+    <div class="class-details">Level 2: $120 per hour</div>
+
+    <div class="class-category">Senior (10 students per class - Provincial/National Competitions)</div>
+    <div class="class-details">Level 1: $200 per hour</div>
+    <div class="class-details">Level 2: $250 per hour</div>
+
+    <div class="class-category">Advanced (5 students per class - International Competitions)</div>
+    <div class="class-details">Level 1: $300 per hour</div>
+    <div class="class-details">Level 2: $350 per hour</div>
+    
+    <a href="https://docs.google.com/forms/d/1p2R5hSgtKHQdlleXazWOvB1BxnPkDJHbq9TBWfWbBn0/edit" class="register-btn" target="_blank">Register Here</a>
+</body>
+</html>
+
+            `);
+            newTab.document.close();
+        }
+
+        
+
+        
+        function openRelatedButton(event) {
+            if (event.key === 'Enter') {
+                const searchQuery = document.getElementById('search').value.toLowerCase();
+                const buttons = document.querySelectorAll('.nav-button');
+
+                buttons.forEach(button => {
+                    if (button.textContent.toLowerCase().includes(searchQuery)) {
+                        button.click();
+                    }
+                });
+            }
+        }
+
+        
+        function openTeam () {
+        
+        let newTab = window.open("", "_blank");
+            newTab.document.write(`  
+        
+        
+           
+            
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers</title>
+
+    <style>
+     
+        Body {
+            background-color: rgb(255, 255, 255);
+        }
+        h1 {
+            color: red;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        </style>
+</head>
+<body>
+  <h1>Members</h1>
+<ul>
+    <li>Managing</li>
+    <li>Marketing</li>
+    <li>Sales</li>
+    <li>Production</li>
+     <li>Customer Service</li>
+      <li>Finance</li>
+       <li>IT</li> 
+       <li>Design Team</li>
+</ul>
+
+</body>
+</html>
+            
+            `);  
+        
+}
+        
+        </script>
+
+    </style>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
